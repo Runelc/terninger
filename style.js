@@ -116,10 +116,3 @@ function rulterninger() {
     sendVidere.style.display = 'block';
     derover.disabled = false;
 }
-
-setInterval(() => {
-    let terningTo = (Math.random() * 7);
-    if (terningTo >= 6) {
-        console.log(terningTo)
-    } 
-}, 10);
