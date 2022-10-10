@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+.terning {
+    margin: 15px;
+    width: 75px;
+}
+
+#terning__container {
+    display: flex; 
+    justify-content: center;
+}
+
+.hele__skaerm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    min-width: 300px;
+    
+}
+
+/*=============== Knap styling =============== */
+.custom-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
