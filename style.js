@@ -25,6 +25,8 @@ kast.onclick = () => {
 
 sendVidere.onclick = () => {
     skjul()
+    loeft.style.display = 'block';
+    derover.disabled = true;
 }
 
 function skjul() {
@@ -33,6 +35,7 @@ function skjul() {
     loeft.style.visibility = 'visible';
     terningContainer.style.visibility = 'hidden';
     loeft.disabled = false;
+    derover.style.display = 'block';
 }
 
 loeft.onclick = function loeftCup() {
@@ -40,35 +43,37 @@ loeft.onclick = function loeftCup() {
     kast.style.display = 'none';
     loeft.disabled = true;
     nytSpil.style.display = 'block';
-
+    derover.disabled = true;
 }
 
 nytSpil.onclick = function reset() {
     kast.style.display = 'block';
     sendVidere.style.display = 'block';
+    sendVidere.disabled = true;
     nytSpil.style.display = 'none';
     loeft.style.visibility = 'hidden';
     taelClicks = 0;
+    derover.style.display = 'none';
 }
 
 
 derover.onclick = function videre() {
     rulterninger()
     skjul()
-    loeft.style.visibility = 'visible';
     loeft.style.display = 'block';
+    loeft.style.visibility = 'visible';
+    derover.disabled = true;
 }
 
 
 function rulterninger() {
     taelClicks++;
 
-    if (taelClicks === 2) {
+    if (taelClicks >= 2) {
         derover.style.display = 'block';
         loeft.style.display = 'none';
-
     } else {
-        derover.style.display = 'none';
+      
     }
 
     let terningEt = Math.floor(Math.random() * 6);
@@ -108,7 +113,13 @@ function rulterninger() {
     terningContainer.style.visibility = 'visible';
     kast.disabled = true;
     sendVidere.disabled = false;
-    /* skjul() */
-
-    
+    sendVidere.style.display = 'block';
+    derover.disabled = false;
 }
+
+setInterval(() => {
+    let terningTo = (Math.random() * 7);
+    if (terningTo >= 6) {
+        console.log(terningTo)
+    } 
+}, 10);
