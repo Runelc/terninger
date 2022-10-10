@@ -20,13 +20,12 @@
 }
 
 .hele__skaerm {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
-    min-width: 300px;
-    
+    display: flex; 
+    height: 100vh;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: auto; 
+    width: 30vh; 
 }
 
 /*=============== Knap styling =============== */
